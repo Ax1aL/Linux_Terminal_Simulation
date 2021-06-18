@@ -75,40 +75,39 @@ void takeInput(){
 }
 
 
-int execInput(char input[100])
-{
-char buf[100]="";
-strcat(buf,input);
+int execInput(char input[100]){
+	char buf[100]="";
+	strcat(buf,input);
 
-char* token=strtok(buf," ");
+	char* token=strtok(buf," ");
 
-if(token==NULL){return -1;}
+	if(token==NULL){return -1;}
 
-//history[pos++]=token;
+	//history[pos++]=token;
 
-if(!strcmp(token,"history")){
-	int hisTemp=0;
-	printf("\nHistory:");
+	if(!strcmp(token,"history")){
+		int hisTemp=0;
+		printf("\nHistory:");
 
-	while(strcmp(history[hisTemp],"\n")!=0){
+		while(strcmp(history[hisTemp],"\n")!=0){
 
-		printf("%s ",history[hisTemp]);
-		++hisTemp;
-	}
+			printf("%s ",history[hisTemp]);
+			++hisTemp;
+		}
 
-	printf("\n");
-	return -1;
-	}
+		printf("\n");
+		return -1;
+		}
 
-memcpy(history[pos++],token,strlen(token));
+	memcpy(history[pos++],token,strlen(token));
 
-if(!strcmp(token,"exit")){return 0;}
+	if(!strcmp(token,"exit")){return 0;}
 
-if(!strcmp(token,"ls")){return 2;}
+	if(!strcmp(token,"ls")){return 2;}
 
-if(!strcmp(token,"help")){return 3;}
+	if(!strcmp(token,"help")){return 3;}
 
-if(!strcmp(token,"pwd")){return 4;}
+	if(!strcmp(token,"pwd")){return 4;}
 
 	if(!strcmp(token,"cd")){
 		token=strtok(NULL,"");
