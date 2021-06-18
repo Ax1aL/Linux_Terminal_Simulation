@@ -1,4 +1,4 @@
-Ls   ;ls;
+Ls   ;ls; 
 pWd
-hsah
-histoR;  
+hsah -will give error "unknown command"
+histoR; -again error  
