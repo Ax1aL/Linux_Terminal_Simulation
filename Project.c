@@ -11,6 +11,7 @@
 //Linux Terminal Simulation using C
 //It works with multiple inputs on a single line separated by semicolon.
 //You can add as many spaces and write with different letter case ,it will work.
+//Inspiraton drawn from https://www.geeksforgeeks.org/making-linux-shell-c/
 
 
 
